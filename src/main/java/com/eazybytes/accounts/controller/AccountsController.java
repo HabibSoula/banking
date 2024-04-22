@@ -1,7 +1,6 @@
 package com.eazybytes.accounts.controller;
 
 import com.eazybytes.accounts.constants.AccountConstants;
-import com.eazybytes.accounts.dto.AccountsDto;
 import com.eazybytes.accounts.dto.CustomerDto;
 import com.eazybytes.accounts.dto.ResponseDto;
 import com.eazybytes.accounts.service.IAccountsService;
@@ -58,5 +57,15 @@ public class AccountsController {
                     .status(HttpStatus.EXPECTATION_FAILED)
                     .body(new ResponseDto(AccountConstants.STATUS_417, AccountConstants.MESSAGE_417_UPDATE));
         }
+    }
+
+    @DeleteMapping("/delete")
+    public ResponseEntity<ResponseDto> deleteAccount(@RequestParam String mobileNumber)
+    {
+        iAccountsService.deleteAccount(mobileNumber);
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(new ResponseDto(
+                AccountConstants.STATUS_201, AccountConstants.MESSAGE_417_DELETE
+
+        ));
     }
 }

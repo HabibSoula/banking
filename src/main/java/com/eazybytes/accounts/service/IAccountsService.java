@@ -32,4 +32,7 @@ public interface IAccountsService {
      * @return boolean.
      */
     Boolean updateAccount(CustomerDto customerDto);
+
+
+    void deleteAccount(String phoneNumber);
 }
