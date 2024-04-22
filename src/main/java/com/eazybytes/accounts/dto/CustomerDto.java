@@ -10,4 +10,8 @@ public class CustomerDto {
     private String email;
 
     private String mobileNumber;
+
+    // We use this approach to combine both Dtos, in case we have large DTO
+    // its preferable to create a separate DTO and combine both datss
+    private AccountsDto accountsDto;
 }
