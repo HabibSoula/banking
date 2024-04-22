@@ -9,7 +9,7 @@ public class AccountsMapper {
     {
         accountsDto.setAccountNumber(accounts.getAccountNumber());
         accountsDto.setAccountType(accounts.getAccountType());
-        accountsDto.setBranchAddress(accountsDto.getBranchAddress());
+        accountsDto.setBranchAddress(accounts.getBranchAddress());
         return accountsDto;
 
     }
