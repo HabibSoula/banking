@@ -76,8 +76,8 @@ public class AccountsServiceImpl implements IAccountsService {
 
     /**
      *
-     * @param mobileNumber
-     * @return
+     * @param mobileNumber string
+     * @return the details of the customer
      */
 
     @Override
